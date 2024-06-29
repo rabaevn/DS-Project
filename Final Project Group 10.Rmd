@@ -1,0 +1,94 @@
+---
+title: "Data Cleaning Group 10"
+author: "Neomi Rabaev, Yael Snear, Yarin Swisa, Liat Vaizman"
+date: "2024-06-29"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+# load necessary libraries
+library(tidyverse)
+library(dplyr)
+```
+
+## Data Cleaning
+
+```{r eval=TRUE}
+#load the data
+data <- read_tsv("data/equal_in_quality_may22.tsv", col_types = cols(.default = col_guess()))
+parsing_issues <- problems(data)
+parsing_issues
+```
+```{r}
+# remove rows with parsing issues - it means the link is not good for us
+# either the link is not available or in a different language than neede
+if (nrow(parsing_issues) > 0) {
+  problematic_rows <- parsing_issues$row
+  data <- data[-problematic_rows, ]
+}
+```
+
+
+```{r}
+#remove all rows where link is not available or in a different language (regardless of the parsing issues)
+# link accessibility = 2 -> link not available
+# link accessibility = 3 -> link in a different language
+data <- data %>%
+  filter(link_accessibility != 2 & link_accessibility != 3)
+```
+
+
+```{r}
+# we are not checking for conspiracy theories in our question, so remove rows that are about them
+cleaned_data <- data %>%
+  filter(conspiracy != 1)
+```
+
+
+```{r}
+# Install and load naniar package
+install.packages("naniar")
+library(naniar)
+library(ggplot2)
+
+# Install and load necessary packages
+install.packages("ggplot2")
+library(ggplot2)
+
+# Load necessary packages
+library(ggplot2)
+
+# Assuming `data` is your data frame
+# Calculate percentage of missing values per column
+missing_summary <- colSums(is.na(data)) / nrow(data) * 100
+missing_summary_df <- data.frame(variable = names(missing_summary), percent_missing = missing_summary)
+
+# Plot the percentage of missing values per column with improved readability
+ggplot(missing_summary_df, aes(y = reorder(variable, -percent_missing), x = percent_missing)) +
+  geom_bar(stat = "identity", fill = "skyblue", color = "black", width = 0.6) + # Customize bar appearance
+  theme_minimal(base_size = 15) + # Increase base font size for better readability
+  theme(
+    axis.text.y = element_text(size = 8, margin = margin(r = 10)), # Adjust y-axis label size and add margin
+    axis.text.x = element_text(size = 10), # Adjust x-axis label size
+    axis.title = element_text(size = 14), # Increase axis title size
+    plot.title = element_text(size = 16, face = "bold"), # Increase plot title size
+    panel.grid.major.y = element_blank() # Remove horizontal grid lines for y-axis
+  ) +
+  labs(
+    title = "Percentage of Missing Values by Variable",
+    x = "Percentage of Missing Values",
+    y = "Variables"
+  ) +
+  scale_y_discrete(expand = expansion(add = c(0.1, 2))) # Add more space between rows
+
+```
+
+```{r}
+column_names <- colnames(data)
+
+# Print column names
+print(column_names)
+```
+
+
