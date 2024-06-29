@@ -1,0 +1,100 @@
+---
+title: "Data Cleaning Group 10"
+author: "Neomi Rabaev, Yael Snear, Yarin Swisa, Liat Vaizman"
+date: "2024-06-29"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+# load necessary libraries
+library(tidyverse)
+library(dplyr)
+```
+
+## Data Cleaning
+
+```{r eval=TRUE}
+#load the data
+data <- read_tsv("data/equal_in_quality_may22.tsv", col_types = cols(.default = col_guess()))
+parsing_issues <- problems(data)
+parsing_issues
+glimpse(data)
+view(data)
+```
+```{r}
+# remove rows with parsing issues - it means the link is not good for us
+# either the link is not available or in a different language than neede
+if (nrow(parsing_issues) > 0) {
+  problematic_rows <- parsing_issues$row
+  data <- data[-problematic_rows, ]
+}
+```
+
+
+```{r}
+#remove all rows where link is not available or in a different language (regardless of the parsing issues)
+# link accessibility = 2 -> link not available
+# link accessibility = 3 -> link in a different language
+data <- data %>%
+  filter(link_accessibility != 2 & link_accessibility != 3) # maybe also delete 4?
+```
+
+
+```{r}
+# we are not checking for conspiracy theories in our question, so remove rows that are about them
+cleaned_data <- data %>%
+  #filter(conspiracy != 1) %>% # check with nir 
+  filter(!is.na(agg_sci_qual))
+
+glimpse(cleaned_data)
+```
+
+
+```{r}
+# Install and load naniar package
+install.packages("naniar")
+library(naniar)
+library(ggplot2)
+
+# Install and load necessary packages
+install.packages("ggplot2")
+library(ggplot2)
+```
+```{r}
+# Find maximum and minimum of the 'values' column
+summary_stats <- data %>%
+  summarize(
+    max_value = max(cred, na.rm = TRUE),  # Maximum value, na.rm = TRUE ignores NA values
+    min_value = min(cred, na.rm = TRUE)   # Minimum value, na.rm = TRUE ignores NA values
+  )
+
+summary_stats
+```
+
+```{r}
+# Load necessary packages
+library(ggplot2)
+
+# Calculate percentage of missing values per column
+missing_summary <- colSums(is.na(cleaned_data)) / nrow(cleaned_data) * 100
+missing_summary_df <- data.frame(variable = names(missing_summary), percent_missing = missing_summary)
+missing_summary_df <- missing_summary_df[order(-missing_summary_df$percent_missing), ]
+
+
+# Create a list of variables with their percentage of missing values
+missing_list <- paste(missing_summary_df$variable, ": ", round(missing_summary_df$percent_missing, 2), "%", sep = "")
+
+# Print the list
+print(missing_list)
+
+```
+
+```{r}
+column_names <- colnames(data)
+
+# Print column names
+print(column_names)
+```
+
+
