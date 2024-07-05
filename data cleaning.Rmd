@@ -42,27 +42,69 @@ data <- data %>%
 
 
 ```{r}
-# we are not checking for conspiracy theories in our question, so remove rows that are about them
+toDrop <- c("site_type", "gl", "hl", "term", "code_lang", "collection_date", "link", "domain", "top_level_domain", "coding_completion_date", "does_the_content_reject_or_reinforce_the_disc", "is_malicious_meaning_is_alluded_to_in_the_tex", "do_claims_contradict_accepted_scientific_expl", "are_specific_groups_in_society_pharma_jews_mu", "is_there_reference_to_everyday_life", "langs_country", "lang_short", "lang_uniq", "content_producer_fct", "site_type_collapsed", "if_you_answered_no_to_the_previous_question_y")
+
+# remove unnecessary columns and rows with NA's in the most important column
 cleaned_data <- data %>%
   #filter(conspiracy != 1) %>% # check with nir 
-  filter(!is.na(agg_sci_qual))
-
+  filter(!is.na(agg_sci_qual)) %>%
+  select(-all_of(toDrop)) %>%
+  filter(type != "Conspiracy Theories") %>%
+  mutate(country = str_extract(country, "(?<=,)[^,]+$")) %>%# leave only the name of the country
+  mutate(what_is_the_author_background = ifelse(is.na(what_is_the_author_background), 1, what_is_the_author_background))%>%
+  # Calculate the most frequent value in the column
+  mutate(site_type_fct = coalesce(site_type_fct, 
+                                   names(sort(table(site_type_fct), decreasing = TRUE))[1])) %>%
+  # replace na's in jargon with 0
+  mutate(jargon_score = replace_na(jargon_score, 0)) %>%
+  mutate(are_there_major_scientific_errors_in_the_link = replace_na(are_there_major_scientific_errors_in_the_link, 0))
 glimpse(cleaned_data)
 ```
 
-
 ```{r}
-# Install and load naniar package
-install.packages("naniar")
-library(naniar)
-library(ggplot2)
+# replace NA's with the most common for each language
+# Calculate the most common content_producer for each language
+most_common_producer <- cleaned_data %>%
+  filter(!is.null(content_producer)) %>%
+  group_by(langs, content_producer) %>%
+  summarise(count = n()) %>%
+  arrange(desc(count)) %>%
+  slice(1) %>%
+  select(langs, content_producer)
 
-# Install and load necessary packages
-install.packages("ggplot2")
-library(ggplot2)
+# Join the most common content_producer back to the cleaned_data
+cleaned_data <- cleaned_data %>%
+  left_join(most_common_producer, by = "langs", suffix = c("", "_most_common")) %>%
+  mutate(content_producer = ifelse(is.null(content_producer), content_producer_most_common, content_producer)) %>%
+  select(-content_producer_most_common)
 ```
 ```{r}
-# Find maximum and minimum of the 'values' column
+# Replace NULL values in the how_recent_is_the_information column
+cleaned_data <- cleaned_data %>%
+  group_by(langs) %>%
+  mutate(how_recent_is_the_information = ifelse(
+    is.na(how_recent_is_the_information),
+    # Find the most common value (mode) for each language
+    names(sort(table(how_recent_is_the_information), decreasing = TRUE))[1],
+    how_recent_is_the_information
+  )) %>%
+  ungroup()
+
+```
+
+
+```{r}
+# Replace NA values in 'are_there_any_scientific_terms_that_lay_peopl' based on 'jargon_score'
+cleaned_data <- cleaned_data %>%
+  mutate(are_there_any_scientific_terms_that_lay_peopl = case_when(
+    is.na(are_there_any_scientific_terms_that_lay_peopl) & jargon_score == 0 ~ 0,
+    is.na(are_there_any_scientific_terms_that_lay_peopl) & jargon_score == 1 ~ 2,
+    is.na(are_there_any_scientific_terms_that_lay_peopl) & jargon_score != 0 & jargon_score != 1 ~ 1,
+    TRUE ~ are_there_any_scientific_terms_that_lay_peopl  # keep the existing values if not NA
+  ))
+```
+```{r}
+# Find maximum and minimum of the column
 summary_stats <- data %>%
   summarize(
     max_value = max(cred, na.rm = TRUE),  # Maximum value, na.rm = TRUE ignores NA values
@@ -71,10 +113,45 @@ summary_stats <- data %>%
 
 summary_stats
 ```
+```{r}
+# Define the columns to modify
+columns_to_modify <- c(
+  "x1_none_of_the_below",
+  "x2_others",
+  "x3_place_to_leave_comments_ask_questions",
+  "x4_graphs",
+  "x5_relevant_multimedia_e_g_video_animation_et",
+  "x6_hyper_links",
+  "x7_numerical_data",
+  "x8_list_of_sources",
+  "x9_citation_or_references_to_relevant_literat"
+)
+
+# Replace NULL values with 0 in the specified columns
+for (col in columns_to_modify) {
+  cleaned_data[[col]][is.null(cleaned_data[[col]]) | is.na(cleaned_data[[col]])] <- 0
+}
+
+# Remove the specified column
+cleaned_data$are_the_following_sources_available_in_the_li <- NULL
+
+# To inspect the changes, you can view the first few rows of the dataset
+view(cleaned_data)
+
+# Count nulls in specific columns
+null_counts <- colSums(is.na(cleaned_data[c("x1_none_of_the_below",
+                                           "x2_others",
+                                           "x3_place_to_leave_comments_ask_questions",
+                                           "x4_graphs",
+                                           "x5_relevant_multimedia_e_g_video_animation_et",
+                                           "x6_hyper_links",
+                                           "x7_numerical_data",
+                                           "x8_list_of_sources",
+                                           "x9_citation_or_references_to_relevant_literat")]))
+```
+
 
 ```{r}
-# Load necessary packages
-library(ggplot2)
 
 # Calculate percentage of missing values per column
 missing_summary <- colSums(is.na(cleaned_data)) / nrow(cleaned_data) * 100
@@ -89,12 +166,4 @@ missing_list <- paste(missing_summary_df$variable, ": ", round(missing_summary_d
 print(missing_list)
 
 ```
-
-```{r}
-column_names <- colnames(data)
-
-# Print column names
-print(column_names)
-```
-
-
+GREAT SUCCESS
