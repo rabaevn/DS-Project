@@ -135,21 +135,30 @@ for (col in columns_to_modify) {
 # Remove the specified column
 cleaned_data$are_the_following_sources_available_in_the_li <- NULL
 
-# To inspect the changes, you can view the first few rows of the dataset
-view(cleaned_data)
-
-# Count nulls in specific columns
-null_counts <- colSums(is.na(cleaned_data[c("x1_none_of_the_below",
-                                           "x2_others",
-                                           "x3_place_to_leave_comments_ask_questions",
-                                           "x4_graphs",
-                                           "x5_relevant_multimedia_e_g_video_animation_et",
-                                           "x6_hyper_links",
-                                           "x7_numerical_data",
-                                           "x8_list_of_sources",
-                                           "x9_citation_or_references_to_relevant_literat")]))
+```
+```{r}
+cleaned_data$are_there_local_examples_in_the_content_e_g_r[is.na(cleaned_data$are_there_local_examples_in_the_content_e_g_r)] <- 0
+cleaned_data$does_the_content_present_advantages_and_disad[is.na(cleaned_data$does_the_content_present_advantages_and_disad)] <- 0
 ```
 
+```{r}
+library(dplyr)
+
+# Function to replace NULL values with the most common value per language
+replace_null_with_mode <- function(data, target_col, group_col) {
+  data %>%
+    group_by(!!sym(group_col)) %>%
+    mutate(!!sym(target_col) := ifelse(is.na(!!sym(target_col)),
+                                       as.numeric(names(sort(table(!!sym(target_col)), decreasing = TRUE)[1])),
+                                       !!sym(target_col))) %>%
+    ungroup()
+}
+
+# Replace NULL values in the specified columns
+cleaned_data <- replace_null_with_mode(cleaned_data, "local_examples_prop", "langs")
+cleaned_data <- replace_null_with_mode(cleaned_data, "how_accurate_is_the_scientific_content_presen", "langs")
+cleaned_data <- replace_null_with_mode(cleaned_data, "is_a_scientific_background_high_school_or_abo", "langs")
+```
 
 ```{r}
 
