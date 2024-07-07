@@ -160,6 +160,37 @@ cleaned_data <- replace_null_with_mode(cleaned_data, "how_accurate_is_the_scient
 cleaned_data <- replace_null_with_mode(cleaned_data, "is_a_scientific_background_high_school_or_abo", "langs")
 ```
 
+
+
+```{r}
+# convert double columns to factors (categorial column)
+columns_to_convert <- c("content_producer", "site_type_fct", "type", "link_type", "link_accessibility", "jargon_score", "are_there_local_examples_in_the_content_e_g_r", "does_the_content_present_advantages_and_disad")
+
+cleaned_data <- cleaned_data %>%
+  mutate(across(all_of(columns_to_convert), as.factor))
+```
+
+
+
+
+```{r}
+# convert columns to ordinal values
+# specify their levels
+ordinal_columns <- list(
+  access_multimedia = 0:4,
+  access_sci = 0:2,
+  accuracy = 0:2,
+  cred = 0:4,
+  contextual = 0:3,
+  access = 0:4
+  
+)
+
+cleaned_data <- cleaned_data %>%
+  mutate(across(all_of(names(ordinal_columns)), ~ factor(., levels = ordinal_columns[[as.character(cur_column())]])))
+```
+
+
 ```{r}
 
 # Calculate percentage of missing values per column
@@ -175,4 +206,9 @@ missing_list <- paste(missing_summary_df$variable, ": ", round(missing_summary_d
 print(missing_list)
 
 ```
+```{r}
+# get the clean data to a file to work on
+write.table(cleaned_data, file = "cleaned_data.tsv", sep = "\t", row.names = FALSE, quote = FALSE)
+```
+
 GREAT SUCCESS
