@@ -110,6 +110,9 @@ replace_null_with_mode <- function(data, target_col, group_col) {
 
 # Replace NULL values in the specified columns
 cleaned_data <- replace_null_with_mode(cleaned_data, "local_examples_prop", "langs")
+cleaned_data <- replace_null_with_mode(cleaned_data, "does_the_content_present_advantages_and_disad", "langs")
+cleaned_data <- replace_null_with_mode(cleaned_data, "are_there_local_examples_in_the_content_e_g_r", "langs")
+cleaned_data <- replace_null_with_mode(cleaned_data, "access", "langs")
 ```
 
 
@@ -135,27 +138,12 @@ ordinal_columns <- list(
   cred = 0:4,
   contextual = 0:3,
   access = 0:4
-  
 )
 
 cleaned_data <- cleaned_data %>%
   mutate(across(all_of(names(ordinal_columns)), ~ factor(., levels = ordinal_columns[[as.character(cur_column())]])))
 ```
 
-```{r}
-# Columns to replace NA with mode
-cols_to_replace <- c("does_the_content_present_advantages_and_disad", "are_there_local_examples_in_the_content_e_g_r", "access")
-
-get_mode <- function(x) {
-  mode_value <- names(sort(table(x), decreasing = TRUE))[1]
-  mode_value
-}
-
-# Replace NA with mode for specific columns
-cleaned_data <- cleaned_data %>%
-  mutate(across(all_of(cols_to_replace), ~ ifelse(is.na(.), get_mode(.), .)))
-
-```
 
 ```{r}
 
@@ -174,7 +162,7 @@ print(missing_list)
 ```
 ```{r}
 # get the clean data to a file to work on
-write.table(cleaned_data, file = "cleaned_data2.tsv", sep = "\t", row.names = FALSE, quote = FALSE)
+write.table(cleaned_data, file = "cleaned_data.tsv", sep = "\t", row.names = FALSE, quote = FALSE)
 ```
 
 GREAT SUCCESS
