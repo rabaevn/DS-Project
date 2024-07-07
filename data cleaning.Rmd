@@ -42,13 +42,12 @@ data <- data %>%
 
 
 ```{r}
-toDrop <- c("site_type", "gl", "hl", "term", "code_lang", "collection_date", "link", "domain", "top_level_domain", "coding_completion_date", "does_the_content_reject_or_reinforce_the_disc", "is_malicious_meaning_is_alluded_to_in_the_tex", "do_claims_contradict_accepted_scientific_expl", "are_specific_groups_in_society_pharma_jews_mu", "is_there_reference_to_everyday_life", "langs_country", "lang_short", "lang_uniq", "content_producer_fct", "site_type_collapsed", "if_you_answered_no_to_the_previous_question_y")
+toDrop <- c("site_type", "gl", "hl", "term", "code_lang", "collection_date", "link", "domain", "top_level_domain", "coding_completion_date", "does_the_content_reject_or_reinforce_the_disc", "is_malicious_meaning_is_alluded_to_in_the_tex", "do_claims_contradict_accepted_scientific_expl", "are_specific_groups_in_society_pharma_jews_mu", "is_there_reference_to_everyday_life", "langs_country", "lang_short", "lang_uniq", "content_producer_fct", "site_type_collapsed", "if_you_answered_no_to_the_previous_question_y", "what_is_the_author_background", "are_there_major_scientific_errors_in_the_link", "how_accurate_is_the_scientific_content_presen", "are_there_any_scientific_terms_that_lay_peopl", "is_a_scientific_background_high_school_or_abo", "are_the_following_sources_available_in_the_li", "x1_none_of_the_below", "x2_others", "x3_place_to_leave_comments_ask_questions", "x4_graphs", "x5_relevant_multimedia_e_g_video_animation_et", "x6_hyper_links", "x7_numerical_data", "x8_list_of_sources", "x9_citation_or_references_to_relevant_literat", "producer_high_cred", "cons_n_neg", "cons_n_pos", "recency", "conspiracy", "agg_sci_qual")
 
 # remove unnecessary columns and rows with NA's in the most important column
 cleaned_data <- data %>%
   #filter(conspiracy != 1) %>% # check with nir 
   filter(!is.na(agg_sci_qual)) %>%
-  select(-all_of(toDrop)) %>%
   filter(type != "Conspiracy Theories") %>%
   mutate(country = str_extract(country, "(?<=,)[^,]+$")) %>%# leave only the name of the country
   mutate(what_is_the_author_background = ifelse(is.na(what_is_the_author_background), 1, what_is_the_author_background))%>%
@@ -57,7 +56,8 @@ cleaned_data <- data %>%
                                    names(sort(table(site_type_fct), decreasing = TRUE))[1])) %>%
   # replace na's in jargon with 0
   mutate(jargon_score = replace_na(jargon_score, 0)) %>%
-  mutate(are_there_major_scientific_errors_in_the_link = replace_na(are_there_major_scientific_errors_in_the_link, 0))
+  mutate(are_there_major_scientific_errors_in_the_link = replace_na(are_there_major_scientific_errors_in_the_link, 0)) %>%
+  select(-all_of(toDrop)) 
 glimpse(cleaned_data)
 ```
 
@@ -93,53 +93,7 @@ cleaned_data <- cleaned_data %>%
 ```
 
 
-```{r}
-# Replace NA values in 'are_there_any_scientific_terms_that_lay_peopl' based on 'jargon_score'
-cleaned_data <- cleaned_data %>%
-  mutate(are_there_any_scientific_terms_that_lay_peopl = case_when(
-    is.na(are_there_any_scientific_terms_that_lay_peopl) & jargon_score == 0 ~ 0,
-    is.na(are_there_any_scientific_terms_that_lay_peopl) & jargon_score == 1 ~ 2,
-    is.na(are_there_any_scientific_terms_that_lay_peopl) & jargon_score != 0 & jargon_score != 1 ~ 1,
-    TRUE ~ are_there_any_scientific_terms_that_lay_peopl  # keep the existing values if not NA
-  ))
-```
-```{r}
-# Find maximum and minimum of the column
-summary_stats <- data %>%
-  summarize(
-    max_value = max(cred, na.rm = TRUE),  # Maximum value, na.rm = TRUE ignores NA values
-    min_value = min(cred, na.rm = TRUE)   # Minimum value, na.rm = TRUE ignores NA values
-  )
 
-summary_stats
-```
-```{r}
-# Define the columns to modify
-columns_to_modify <- c(
-  "x1_none_of_the_below",
-  "x2_others",
-  "x3_place_to_leave_comments_ask_questions",
-  "x4_graphs",
-  "x5_relevant_multimedia_e_g_video_animation_et",
-  "x6_hyper_links",
-  "x7_numerical_data",
-  "x8_list_of_sources",
-  "x9_citation_or_references_to_relevant_literat"
-)
-
-# Replace NULL values with 0 in the specified columns
-for (col in columns_to_modify) {
-  cleaned_data[[col]][is.null(cleaned_data[[col]]) | is.na(cleaned_data[[col]])] <- 0
-}
-
-# Remove the specified column
-cleaned_data$are_the_following_sources_available_in_the_li <- NULL
-
-```
-```{r}
-cleaned_data$are_there_local_examples_in_the_content_e_g_r[is.na(cleaned_data$are_there_local_examples_in_the_content_e_g_r)] <- 0
-cleaned_data$does_the_content_present_advantages_and_disad[is.na(cleaned_data$does_the_content_present_advantages_and_disad)] <- 0
-```
 
 ```{r}
 library(dplyr)
@@ -156,8 +110,6 @@ replace_null_with_mode <- function(data, target_col, group_col) {
 
 # Replace NULL values in the specified columns
 cleaned_data <- replace_null_with_mode(cleaned_data, "local_examples_prop", "langs")
-cleaned_data <- replace_null_with_mode(cleaned_data, "how_accurate_is_the_scientific_content_presen", "langs")
-cleaned_data <- replace_null_with_mode(cleaned_data, "is_a_scientific_background_high_school_or_abo", "langs")
 ```
 
 
@@ -190,6 +142,20 @@ cleaned_data <- cleaned_data %>%
   mutate(across(all_of(names(ordinal_columns)), ~ factor(., levels = ordinal_columns[[as.character(cur_column())]])))
 ```
 
+```{r}
+# Columns to replace NA with mode
+cols_to_replace <- c("does_the_content_present_advantages_and_disad", "are_there_local_examples_in_the_content_e_g_r", "access")
+
+get_mode <- function(x) {
+  mode_value <- names(sort(table(x), decreasing = TRUE))[1]
+  mode_value
+}
+
+# Replace NA with mode for specific columns
+cleaned_data <- cleaned_data %>%
+  mutate(across(all_of(cols_to_replace), ~ ifelse(is.na(.), get_mode(.), .)))
+
+```
 
 ```{r}
 
@@ -208,7 +174,7 @@ print(missing_list)
 ```
 ```{r}
 # get the clean data to a file to work on
-write.table(cleaned_data, file = "cleaned_data.tsv", sep = "\t", row.names = FALSE, quote = FALSE)
+write.table(cleaned_data, file = "cleaned_data2.tsv", sep = "\t", row.names = FALSE, quote = FALSE)
 ```
 
 GREAT SUCCESS
