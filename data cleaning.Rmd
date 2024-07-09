@@ -116,7 +116,6 @@ cleaned_data <- replace_null_with_mode(cleaned_data, "access", "langs")
 ```
 
 
-
 ```{r}
 # convert double columns to factors (categorial column)
 columns_to_convert <- c("content_producer", "site_type_fct", "type", "link_type", "link_accessibility", "jargon_score", "are_there_local_examples_in_the_content_e_g_r", "does_the_content_present_advantages_and_disad")
@@ -137,7 +136,7 @@ ordinal_columns <- list(
   accuracy = 0:2,
   cred = 0:4,
   contextual = 0:3,
-  access = 0:4
+  access = 0:6
 )
 
 cleaned_data <- cleaned_data %>%

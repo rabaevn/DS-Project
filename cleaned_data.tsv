@@ -146,13 +146,13 @@ content_producer	term_id	langs	country	type	result_number	link_type	link_accessi
 1	68	Zulu	South Africa	Socio-Scientific Issues	3	1	4	4	0	2	1	2	Text	1	1	0	1	2	2	2.25
 1	5	Portuguese	Brazil	Canonical Scientific Issues	3	1	4	1	0	0	0	2	Database	3	1	0	1	1	4	1.25
 1	5	Portuguese	Brazil	Canonical Scientific Issues	4	1	4	1	0	0	0	1	Database	2	1	0	1	0	3	0.75
-1	5	French	Democratic Republic of the Congo	Canonical Scientific Issues	7	1	1	1	3	2	1	1	Database	3	2	1	1	1	NA	1.91666666666667
+1	5	French	Democratic Republic of the Congo	Canonical Scientific Issues	7	1	1	1	3	2	1	1	Database	3	2	1	1	1	5	1.91666666666667
 1	65	German	Germany	Socio-Scientific Issues	3	1	4	1	3	1	0.5	1	Database	2	2	0	1	1	4	1.25
-1	5	Spanish	Spain	Canonical Scientific Issues	3	1	1	1	3	2	1	2	Database	4	2	1	1	2	NA	2.41666666666667
-1	5	Spanish	Spain	Canonical Scientific Issues	4	1	1	1	3	2	1	2	Database	3	2	1	2	2	NA	2.5
-1	44	Spanish	Spain	Novel Science and Technology Issues	10	1	1	1	3	1	0.5	1	Database	3	2	1	1	0	NA	1.58333333333333
-1	54	Spanish	Spain	Socio-Scientific Issues	1	1	1	1	3	2	1	1	Database	3	2	1	1	2	NA	2.25
-1	35	Spanish	Spain	Canonical Scientific Issues	7	1	1	1	3	1	0.5	1	Database	3	2	1	1	0	NA	1.58333333333333
+1	5	Spanish	Spain	Canonical Scientific Issues	3	1	1	1	3	2	1	2	Database	4	2	1	1	2	6	2.41666666666667
+1	5	Spanish	Spain	Canonical Scientific Issues	4	1	1	1	3	2	1	2	Database	3	2	1	2	2	5	2.5
+1	44	Spanish	Spain	Novel Science and Technology Issues	10	1	1	1	3	1	0.5	1	Database	3	2	1	1	0	5	1.58333333333333
+1	54	Spanish	Spain	Socio-Scientific Issues	1	1	1	1	3	2	1	1	Database	3	2	1	1	2	5	2.25
+1	35	Spanish	Spain	Canonical Scientific Issues	7	1	1	1	3	1	0.5	1	Database	3	2	1	1	0	5	1.58333333333333
 1	5	French	France	Canonical Scientific Issues	8	1	4	1	0	0	0	0	Database	3	1	0	1	0	4	0.916666666666667
 1	68	French	France	Socio-Scientific Issues	3	3	1	4	3	2	1	2	Database	2	1	1	1	3	3	3.25
 1	71	French	France	Socio-Scientific Issues	1	1	1	4	3	2	1	2	Database	2	2	1	1	2	4	3.08333333333333
@@ -171,7 +171,7 @@ content_producer	term_id	langs	country	type	result_number	link_type	link_accessi
 1	65	Japanese	Japan	Socio-Scientific Issues	10	1	1	4	3	1	0.5	1	Database	2	2	1	1	0	4	2.41666666666667
 1	66	Japanese	Japan	Socio-Scientific Issues	9	1	1	4	3	1	0.5	1	Database	2	2	0	1	0	4	1.91666666666667
 1	68	Japanese	Japan	Socio-Scientific Issues	1	1	1	4	3	1	0.5	1	Database	2	2	1	1	0	4	2.41666666666667
-1	68	Japanese	Japan	Socio-Scientific Issues	6	1	1	4	3	1	0.5	1	Database	3	2	1	1	1	NA	2.91666666666667
+1	68	Japanese	Japan	Socio-Scientific Issues	6	1	1	4	3	1	0.5	1	Database	3	2	1	1	1	5	2.91666666666667
 1	43	Korean	South Korea	Novel Science and Technology Issues	1	1	1	4	3	1	0.5	1	Database	2	2	1	1	0	4	2.41666666666667
 1	71	Turkish	Turkey	Socio-Scientific Issues	7	1	1	4	3	1	0.5	1	Database	2	2	2	1	0	4	2.91666666666667
 1	28	Taiwanese	Taiwan	Canonical Scientific Issues	3	1	4	1	0	2	1	0	Database	2	1	0	1	2	3	1.41666666666667
@@ -183,10 +183,10 @@ content_producer	term_id	langs	country	type	result_number	link_type	link_accessi
 1	59	Taiwanese	Taiwan	Socio-Scientific Issues	10	1	1	4	3	1	0.5	1	Database	2	2	1	1	0	4	2.41666666666667
 1	68	Taiwanese	Taiwan	Socio-Scientific Issues	6	1	1	4	3	1	0.5	1	Database	2	2	1	1	1	4	2.75
 1	68	Taiwanese	Taiwan	Socio-Scientific Issues	12	1	1	4	3	1	0.5	1	Database	2	2	1	1	1	4	2.75
-1	28	English	United States	Canonical Scientific Issues	2	3	1	1	3	2	1	1	Database	3	2	1	2	3	NA	2.83333333333333
+1	28	English	United States	Canonical Scientific Issues	2	3	1	1	3	2	1	1	Database	3	2	1	2	3	5	2.83333333333333
 1	43	English	United States	Novel Science and Technology Issues	2	3	1	1	1	0	0	0	Database	3	0	1	3	1	3	2.08333333333333
-1	44	English	United States	Novel Science and Technology Issues	1	1	1	1	3	0	0	0	Database	3	2	1	4	1	NA	2.66666666666667
-1	59	English	United States	Socio-Scientific Issues	1	1	1	1	3	2	1	2	Database	4	2	1	4	2	NA	3.16666666666667
+1	44	English	United States	Novel Science and Technology Issues	1	1	1	1	3	0	0	0	Database	3	2	1	4	1	5	2.66666666666667
+1	59	English	United States	Socio-Scientific Issues	1	1	1	1	3	2	1	2	Database	4	2	1	4	2	6	3.16666666666667
 1	43	Vietnamese	Vietnam	Novel Science and Technology Issues	1	1	1	4	3	1	0.5	2	Database	2	2	1	1	1	4	2.75
 1	70	Vietnamese	Vietnam	Socio-Scientific Issues	11	1	1	1	3	2	1	2	Database	2	2	1	1	1	4	1.75
 1	59	Indonesian	Indonesia	Socio-Scientific Issues	5	2	1	1	3	1	0.5	2	Video	1	2	1	1	1	3	1.58333333333333
@@ -245,7 +245,7 @@ content_producer	term_id	langs	country	type	result_number	link_type	link_accessi
 1	66	French	France	Socio-Scientific Issues	2	1	1	4	3	1	0.5	2	Text_and_illustrations	2	2	1	1	0	4	2.41666666666667
 1	70	French	France	Socio-Scientific Issues	1	1	1	1	3	2	1	2	Text_and_illustrations	2	2	1	1	2	4	2.08333333333333
 1	70	French	France	Socio-Scientific Issues	8	1	1	1	3	2	1	2	Text_and_illustrations	2	2	1	1	2	4	2.08333333333333
-1	70	French	France	Socio-Scientific Issues	13	1	1	4	3	2	1	2	Text_and_illustrations	3	2	1	1	2	NA	3.25
+1	70	French	France	Socio-Scientific Issues	13	1	1	4	3	2	1	2	Text_and_illustrations	3	2	1	1	2	5	3.25
 1	54	French	France	Socio-Scientific Issues	3	1	1	4	3	2	1	2	Text_and_illustrations	2	2	0	1	2	4	2.58333333333333
 1	70	French	France	Socio-Scientific Issues	7	1	4	4	3	2	1	2	Text_and_illustrations	2	2	0	1	2	4	2.58333333333333
 1	45	French	France	Novel Science and Technology Issues	3	1	1	4	3	1	0.5	2	Text_and_illustrations	3	1	1	2	1	4	3
@@ -307,7 +307,7 @@ content_producer	term_id	langs	country	type	result_number	link_type	link_accessi
 1	66	Japanese	Japan	Socio-Scientific Issues	5	1	1	1	3	1	0.5	1	Text_and_illustrations	1	2	1	1	1	3	1.58333333333333
 1	68	Japanese	Japan	Socio-Scientific Issues	2	1	1	4	3	2	1	1	Text_and_illustrations	2	2	1	1	2	4	3.08333333333333
 1	68	Japanese	Japan	Socio-Scientific Issues	12	1	1	4	3	2	1	1	Text_and_illustrations	2	2	1	2	1	4	3
-1	70	Japanese	Japan	Socio-Scientific Issues	1	1	1	4	3	2	1	1	Text_and_illustrations	3	2	1	1	2	NA	3.25
+1	70	Japanese	Japan	Socio-Scientific Issues	1	1	1	4	3	2	1	1	Text_and_illustrations	3	2	1	1	2	5	3.25
 1	70	Japanese	Japan	Socio-Scientific Issues	4	1	1	1	3	1	0.5	1	Text_and_illustrations	2	2	1	1	1	4	1.75
 1	28	Swahili	Kenya	Canonical Scientific Issues	3	1	1	4	3	2	1	2	Text_and_illustrations	2	2	1	1	2	4	3.08333333333333
 1	5	Korean	South Korea	Canonical Scientific Issues	2	1	1	4	3	2	1	1	Text_and_illustrations	2	2	1	2	2	4	3.33333333333333
@@ -390,13 +390,13 @@ content_producer	term_id	langs	country	type	result_number	link_type	link_accessi
 1	42	English	United States	Novel Science and Technology Issues	2	2	1	4	1	1	0.5	1	Text_and_illustrations	2	0	1	2	0	2	2.33333333333333
 1	44	English	United States	Novel Science and Technology Issues	2	3	1	1	3	1	0.5	2	Text_and_illustrations	2	2	1	2	2	4	2.33333333333333
 1	45	English	United States	Novel Science and Technology Issues	6	2	1	1	3	0	0	1	Text_and_illustrations	2	2	1	2	0	4	1.66666666666667
-1	49	English	United States	Novel Science and Technology Issues	10	2	1	1	3	0	0	1	Text_and_illustrations	3	2	1	2	1	NA	2.16666666666667
+1	49	English	United States	Novel Science and Technology Issues	10	2	1	1	3	0	0	1	Text_and_illustrations	3	2	1	2	1	5	2.16666666666667
 1	56	English	United States	Socio-Scientific Issues	10	3	1	4	3	2	1	1	Text_and_illustrations	2	2	2	2	3	4	4.16666666666667
 1	58	English	United States	Socio-Scientific Issues	7	1	1	1	3	2	1	1	Text_and_illustrations	1	2	1	2	2	3	2.16666666666667
 1	59	English	United States	Socio-Scientific Issues	2	1	1	1	3	2	1	1	Text_and_illustrations	2	2	1	4	2	4	2.83333333333333
 1	66	English	United States	Socio-Scientific Issues	15	2	1	4	2	2	1	2	Text_and_illustrations	2	1	1	2	1	3	2.83333333333333
-1	71	English	United States	Socio-Scientific Issues	15	1	1	1	3	2	1	2	Text_and_illustrations	3	2	1	2	2	NA	2.5
-1	71	English	United States	Socio-Scientific Issues	2	3	1	1	3	2	1	2	Text_and_illustrations	3	2	1	2	3	NA	2.83333333333333
+1	71	English	United States	Socio-Scientific Issues	15	1	1	1	3	2	1	2	Text_and_illustrations	3	2	1	2	2	5	2.5
+1	71	English	United States	Socio-Scientific Issues	2	3	1	1	3	2	1	2	Text_and_illustrations	3	2	1	2	3	5	2.83333333333333
 1	20	Chinese	United States	Canonical Scientific Issues	9	1	1	3	3	1	0.5	1	Text_and_illustrations	1	2	1	2	0	3	1.5
 1	39	Chinese	United States	Novel Science and Technology Issues	2	1	1	4	2	1	0.5	1	Text_and_illustrations	3	0	1	2	0	3	2.5
 1	39	Chinese	United States	Novel Science and Technology Issues	3	1	1	4	3	1	0.5	1	Text_and_illustrations	1	2	1	1	0	3	2.25
@@ -434,7 +434,7 @@ content_producer	term_id	langs	country	type	result_number	link_type	link_accessi
 1	46	Hebrew	Israel	Novel Science and Technology Issues	7	1	1	4	3	2	1	1	Text	0	2	1	1	2	2	2.75
 1	53	Italian	Italy	Socio-Scientific Issues	1	1	1	4	3	1	0.5	2	Text	1	2	1	1	1	3	2.58333333333333
 1	12	Korean	South Korea	Canonical Scientific Issues	9	1	1	1	3	1	0.5	2	Text	0	2	1	1	0	2	1.08333333333333
-1	38	Spanish	Mexico	Canonical Scientific Issues	9	1	1	1	3	2	1	1	Text	3	2	1	2	1	NA	2.16666666666667
+1	38	Spanish	Mexico	Canonical Scientific Issues	9	1	1	1	3	2	1	1	Text	3	2	1	2	1	5	2.16666666666667
 1	52	Russian	Russia	Novel Science and Technology Issues	3	1	1	1	2	1	0.5	1	Text	1	1	1	0	1	2	1.16666666666667
 1	8	Turkish	Turkey	Canonical Scientific Issues	11	1	1	1	3	1	0.5	2	Text	0	2	1	0	1	2	1.16666666666667
 1	56	Turkish	Turkey	Socio-Scientific Issues	3	1	1	4	2	1	0.5	1	Text	1	1	1	0	1	2	2.16666666666667
@@ -453,10 +453,10 @@ content_producer	term_id	langs	country	type	result_number	link_type	link_accessi
 1	54	Zulu	South Africa	Socio-Scientific Issues	2	1	4	4	0	0	0	0	Text	0	1	0	0	0	1	1.16666666666667
 1	59	French	Democratic Republic of the Congo	Socio-Scientific Issues	5	1	4	1	0	1	0.5	1	Database	3	1	0	0	1	4	1
 1	6	French	France	Canonical Scientific Issues	3	1	4	1	0	0	0	0	Database	3	1	0	0	0	4	0.666666666666667
-1	8	Hebrew	Israel	Canonical Scientific Issues	4	1	1	4	3	2	1	2	Database	3	2	1	1	2	NA	3.25
+1	8	Hebrew	Israel	Canonical Scientific Issues	4	1	1	4	3	2	1	2	Database	3	2	1	1	2	5	3.25
 1	5	Russian	Russia	Canonical Scientific Issues	8	1	4	4	0	0	0	0	Database	3	1	0	0	0	4	1.66666666666667
 1	58	Russian	Russia	Socio-Scientific Issues	12	1	1	4	1	2	1	2	Database	3	0	1	2	2	3	3.16666666666667
-1	71	Afrikaans	South Africa	Socio-Scientific Issues	4	1	1	1	3	2	1	2	Database	3	2	1	0	2	NA	2
+1	71	Afrikaans	South Africa	Socio-Scientific Issues	4	1	1	1	3	2	1	2	Database	3	2	1	0	2	5	2
 1	70	Indonesian	Indonesia	Socio-Scientific Issues	8	2	1	4	3	1	0.5	2	Video	1	2	1	0	1	3	2.33333333333333
 1	58	Hebrew	Israel	Socio-Scientific Issues	4	2	1	4	1	2	1	1	Video	1	1	2	1	2	2	3.25
 1	71	Hebrew	Israel	Socio-Scientific Issues	5	1	1	1	3	2	1	1	Video	1	2	2	0	2	3	2.16666666666667
@@ -485,7 +485,7 @@ content_producer	term_id	langs	country	type	result_number	link_type	link_accessi
 1	28	Spanish	Spain	Canonical Scientific Issues	1	1	1	1	3	1	0.5	1	Text_and_illustrations	1	1	1	0	0	2	0.833333333333333
 1	28	Spanish	Spain	Canonical Scientific Issues	8	1	1	1	3	1	0.5	1	Text_and_illustrations	1	2	1	0	0	3	1
 1	45	Spanish	Spain	Novel Science and Technology Issues	7	1	1	1	3	1	0.5	2	Text_and_illustrations	1	2	1	1	1	3	1.58333333333333
-1	54	Spanish	Spain	Socio-Scientific Issues	9	1	1	4	3	1	0.5	2	Text_and_illustrations	3	2	1	0	1	NA	2.66666666666667
+1	54	Spanish	Spain	Socio-Scientific Issues	9	1	1	4	3	1	0.5	2	Text_and_illustrations	3	2	1	0	1	5	2.66666666666667
 1	59	Spanish	Spain	Socio-Scientific Issues	1	1	1	4	3	1	0.5	2	Text_and_illustrations	1	2	1	0	1	3	2.33333333333333
 1	66	Spanish	Spain	Socio-Scientific Issues	4	1	1	4	1	1	0.5	2	Text_and_illustrations	2	1	1	0	1	3	2.33333333333333
 1	53	French	France	Socio-Scientific Issues	2	1	1	4	3	2	1	2	Text_and_illustrations	2	2	1	1	2	4	3.08333333333333
@@ -598,11 +598,11 @@ content_producer	term_id	langs	country	type	result_number	link_type	link_accessi
 1	71	Russian	Russia	Socio-Scientific Issues	3	1	1	4	2	2	1	2	Text	0	1	1	2	2	1	2.83333333333333
 1	43	Chinese	United States	Novel Science and Technology Issues	4	1	1	2	2	1	0.5	1	Text	0	1	1	1	1	1	1.25
 1	52	Chinese	United States	Novel Science and Technology Issues	1	1	1	1	2	1	0.5	2	Text	0	0	1	1	0	0	0.75
-1	71	Portuguese	Brazil	Socio-Scientific Issues	7	1	1	1	3	2	1	0	Database	3	2	1	1	2	NA	2.25
+1	71	Portuguese	Brazil	Socio-Scientific Issues	7	1	1	1	3	2	1	0	Database	3	2	1	1	2	5	2.25
 1	68	German	Germany	Socio-Scientific Issues	13	1	1	4	1	1	0.5	1	Database	3	1	1	1	0	4	2.41666666666667
-1	8	French	France	Canonical Scientific Issues	4	1	1	4	3	2	1	1	Database	4	2	1	1	1	NA	3.08333333333333
+1	8	French	France	Canonical Scientific Issues	4	1	1	4	3	2	1	1	Database	4	2	1	1	1	6	3.08333333333333
 1	13	French	France	Canonical Scientific Issues	1	1	1	1	1	0	0	0	Database	1	0	1	2	0	1	1.16666666666667
-1	43	English	United States	Novel Science and Technology Issues	1	1	1	1	3	1	0.5	0	Database	3	2	1	4	1	NA	2.66666666666667
+1	43	English	United States	Novel Science and Technology Issues	1	1	1	1	3	1	0.5	0	Database	3	2	1	4	1	5	2.66666666666667
 1	46	Japanese	Japan	Novel Science and Technology Issues	5	2	1	3	2	1	0.5	1	Video	2	1	1	1	0	3	1.25
 1	49	Japanese	Japan	Novel Science and Technology Issues	5	2	1	4	3	1	0.5	1	Video	1	2	1	2	0	3	2.5
 1	49	Russian	Russia	Novel Science and Technology Issues	2	2	1	3	1	2	1	1	Video	2	1	1	1	1	3	1.58333333333333
@@ -685,7 +685,7 @@ content_producer	term_id	langs	country	type	result_number	link_type	link_accessi
 1	65	Chinese	United States	Socio-Scientific Issues	1	1	1	4	3	2	1	1	Text	2	2	1	2	2	4	3.33333333333333
 1	66	Chinese	United States	Socio-Scientific Issues	3	1	1	4	2	1	0.5	1	Text	3	1	1	2	1	4	3
 1	59	Arabic	Egypt	Socio-Scientific Issues	6	1	1	1	3	0	0	1	Database	2	2	1	2	0	4	1.66666666666667
-1	5	English	United States	Canonical Scientific Issues	7	1	1	4	3	2	1	0	Database	3	2	1	2	2	NA	3.5
+1	5	English	United States	Canonical Scientific Issues	7	1	1	4	3	2	1	0	Database	3	2	1	2	2	5	3.5
 1	54	Arabic	Egypt	Socio-Scientific Issues	8	2	1	4	3	2	1	1	Video	2	2	1	1	1	4	2.75
 1	54	Arabic	Egypt	Socio-Scientific Issues	10	2	1	3	3	0	0	1	Video	2	2	1	1	0	4	1.41666666666667
 1	42	Swahili	Kenya	Novel Science and Technology Issues	11	3	1	4	3	1	0.5	2	Video	2	2	1	2	2	4	3.33333333333333
@@ -698,7 +698,7 @@ content_producer	term_id	langs	country	type	result_number	link_type	link_accessi
 1	59	French	Democratic Republic of the Congo	Socio-Scientific Issues	7	1	1	1	1	1	0.5	2	Text_and_illustrations	2	0	1	2	0	2	1.33333333333333
 1	5	Spanish	Spain	Canonical Scientific Issues	9	1	1	1	3	1	0.5	2	Text_and_illustrations	2	2	1	2	0	4	1.66666666666667
 1	28	Spanish	Spain	Canonical Scientific Issues	15	1	4	1	0	2	1	1	Text_and_illustrations	2	1	0	1	1	3	1.08333333333333
-1	53	Spanish	Spain	Socio-Scientific Issues	10	1	1	4	3	2	1	2	Text_and_illustrations	3	2	1	3	2	NA	3.75
+1	53	Spanish	Spain	Socio-Scientific Issues	10	1	1	4	3	2	1	2	Text_and_illustrations	3	2	1	3	2	5	3.75
 1	54	Spanish	Spain	Socio-Scientific Issues	4	1	1	1	3	2	1	2	Text_and_illustrations	1	2	1	3	1	3	2.08333333333333
 1	58	French	France	Socio-Scientific Issues	8	1	1	1	3	1	0.5	2	Text_and_illustrations	2	2	1	2	0	4	1.66666666666667
 1	59	French	France	Socio-Scientific Issues	1	1	1	1	3	1	0.5	2	Text_and_illustrations	2	1	1	1	1	3	1.58333333333333
@@ -754,11 +754,11 @@ content_producer	term_id	langs	country	type	result_number	link_type	link_accessi
 1	13	Chinese	United States	Canonical Scientific Issues	9	1	1	4	3	2	1	2	Text_and_illustrations	2	2	1	1	1	4	2.75
 1	45	Chinese	United States	Novel Science and Technology Issues	4	1	1	1	3	1	0.5	1	Text_and_illustrations	2	2	1	1	0	4	1.41666666666667
 1	54	Chinese	United States	Socio-Scientific Issues	7	1	1	4	3	1	0.5	1	Text_and_illustrations	2	2	1	1	1	4	2.75
-1	54	Chinese	United States	Socio-Scientific Issues	8	1	1	4	3	1	0.5	1	Text_and_illustrations	3	2	1	1	1	NA	2.91666666666667
+1	54	Chinese	United States	Socio-Scientific Issues	8	1	1	4	3	1	0.5	1	Text_and_illustrations	3	2	1	1	1	5	2.91666666666667
 1	58	Chinese	United States	Socio-Scientific Issues	4	1	1	4	2	1	0.5	2	Text_and_illustrations	1	1	1	1	1	2	2.41666666666667
 1	59	Chinese	United States	Socio-Scientific Issues	2	1	1	4	2	1	0.5	1	Text_and_illustrations	2	1	1	3	1	3	3.08333333333333
 1	66	Chinese	United States	Socio-Scientific Issues	4	1	1	4	1	1	0.5	1	Text_and_illustrations	2	1	1	1	1	3	2.58333333333333
-1	70	Chinese	United States	Socio-Scientific Issues	5	1	1	4	3	1	0.5	1	Text_and_illustrations	3	2	1	2	1	NA	3.16666666666667
+1	70	Chinese	United States	Socio-Scientific Issues	5	1	1	4	3	1	0.5	1	Text_and_illustrations	3	2	1	2	1	5	3.16666666666667
 1	71	Chinese	United States	Socio-Scientific Issues	5	1	1	4	3	1	0.5	1	Text_and_illustrations	1	2	1	2	0	3	2.5
 1	71	Chinese	United States	Socio-Scientific Issues	12	1	1	4	3	2	1	1	Text_and_illustrations	0	2	1	1	1	2	2.41666666666667
 1	48	Portuguese	Brazil	Novel Science and Technology Issues	3	1	1	3	2	1	0.5	1	Text	1	0	1	2	0	1	1.16666666666667
@@ -1058,10 +1058,10 @@ content_producer	term_id	langs	country	type	result_number	link_type	link_accessi
 1	20	Zulu	South Africa	Canonical Scientific Issues	2	1	1	1	2	1	0.5	0	Text	2	0	1	2	1	2	1.66666666666667
 1	35	Zulu	South Africa	Canonical Scientific Issues	9	1	1	3	2	0	0	0	Text	0	0	2	1	0	0	1.25
 1	49	French	Democratic Republic of the Congo	Novel Science and Technology Issues	14	1	4	1	0	0	0	0	Database	2	1	0	1	0	3	0.75
-1	35	French	France	Canonical Scientific Issues	12	1	1	1	3	1	0.5	1	Database	3	2	1	1	0	NA	1.58333333333333
+1	35	French	France	Canonical Scientific Issues	12	1	1	1	3	1	0.5	1	Database	3	2	1	1	0	5	1.58333333333333
 1	6	Hebrew	Israel	Canonical Scientific Issues	4	1	1	4	3	2	1	1	Database	3	1	1	2	2	4	3.33333333333333
 1	13	Russian	Russia	Canonical Scientific Issues	3	1	1	4	1	1	0.5	1	Database	2	1	1	1	0	3	2.25
-1	13	English	United States	Canonical Scientific Issues	7	1	1	1	3	1	0.5	0	Database	3	2	1	1	1	NA	1.91666666666667
+1	13	English	United States	Canonical Scientific Issues	7	1	1	1	3	1	0.5	0	Database	3	2	1	1	1	5	1.91666666666667
 1	59	Zulu	South Africa	Socio-Scientific Issues	2	1	1	1	1	1	0.5	1	Database	3	0	2	1	0	3	1.75
 1	35	French	France	Canonical Scientific Issues	7	2	1	4	2	1	0.5	1	Video	2	1	1	1	0	3	2.25
 1	13	Hebrew	Israel	Canonical Scientific Issues	10	2	1	1	3	1	0.5	1	Video	1	2	1	2	1	3	1.83333333333333
@@ -1091,7 +1091,7 @@ content_producer	term_id	langs	country	type	result_number	link_type	link_accessi
 1	16	Vietnamese	Vietnam	Canonical Scientific Issues	7	2	1	4	3	2	1	1	Video	1	2	1	1	2	3	2.91666666666667
 1	35	Vietnamese	Vietnam	Canonical Scientific Issues	3	2	1	4	3	0	0	2	Video	1	2	2	1	0	3	2.75
 1	35	Vietnamese	Vietnam	Canonical Scientific Issues	5	2	1	4	3	0	0	1	Video	1	2	1	1	0	3	2.25
-1	35	English	United States	Canonical Scientific Issues	15	2	1	2	3	1	0.5	2	Simulation	3	2	1	2	1	NA	2.16666666666667
+1	35	English	United States	Canonical Scientific Issues	15	2	1	2	3	1	0.5	2	Simulation	3	2	1	2	1	5	2.16666666666667
 1	48	English	United States	Novel Science and Technology Issues	12	3	1	4	1	1	0.5	1	Simulation	2	0	1	1	1	2	2.41666666666667
 1	35	Portuguese	Brazil	Canonical Scientific Issues	9	1	1	4	2	1	0.5	1	Text_and_illustrations	2	1	1	2	0	3	2.5
 1	5	French	Democratic Republic of the Congo	Canonical Scientific Issues	2	1	1	1	1	2	1	2	Text_and_illustrations	1	0	1	2	1	1	1.5
@@ -1250,7 +1250,7 @@ content_producer	term_id	langs	country	type	result_number	link_type	link_accessi
 1	52	English	United States	Novel Science and Technology Issues	12	2	1	1	1	1	0.5	1	Text	2	0	1	1	0	2	1.08333333333333
 1	46	Chinese	United States	Novel Science and Technology Issues	12	1	1	3	1	2	1	2	Text	1	0	1	4	2	1	2.33333333333333
 1	13	Arabic	Egypt	Canonical Scientific Issues	5	1	1	1	3	1	0.5	0	Database	2	2	1	1	0	4	1.41666666666667
-1	5	English	United States	Canonical Scientific Issues	13	1	1	4	3	2	1	1	Database	3	2	1	2	2	NA	3.5
+1	5	English	United States	Canonical Scientific Issues	13	1	1	4	3	2	1	1	Database	3	2	1	2	2	5	3.5
 1	46	Japanese	Japan	Novel Science and Technology Issues	7	2	1	4	3	1	0.5	1	Video	1	2	1	2	0	3	2.5
 1	46	Swahili	Kenya	Novel Science and Technology Issues	10	3	1	4	3	1	0.5	2	Video	2	2	1	2	2	4	3.33333333333333
 1	35	English	United States	Canonical Scientific Issues	4	1	1	3	3	0	0	1	Video	1	2	1	3	1	3	2.08333333333333
@@ -1386,7 +1386,7 @@ content_producer	term_id	langs	country	type	result_number	link_type	link_accessi
 1	39	English	United States	Novel Science and Technology Issues	14	1	1	4	3	1	0.5	2	Text_and_illustrations	2	2	2	2	1	4	3.5
 1	56	Chinese	United States	Socio-Scientific Issues	12	1	1	4	2	2	1	1	Text_and_illustrations	2	1	1	1	2	3	2.91666666666667
 1	68	Chinese	United States	Socio-Scientific Issues	2	1	1	1	2	1	0.5	1	Text_and_illustrations	2	1	1	2	1	3	1.83333333333333
-1	53	Vietnamese	Vietnam	Socio-Scientific Issues	9	1	1	4	3	2	1	2	Text_and_illustrations	3	2	1	1	2	NA	3.25
+1	53	Vietnamese	Vietnam	Socio-Scientific Issues	9	1	1	4	3	2	1	2	Text_and_illustrations	3	2	1	1	2	5	3.25
 1	68	Vietnamese	Vietnam	Socio-Scientific Issues	1	1	1	1	3	2	1	2	Text_and_illustrations	2	2	1	2	2	4	2.33333333333333
 1	68	Afrikaans	South Africa	Socio-Scientific Issues	3	1	1	4	1	1	0.5	1	Text_and_illustrations	1	1	1	1	1	2	2.41666666666667
 1	53	Afrikaans	South Africa	Socio-Scientific Issues	3	1	1	4	2	1	0.5	2	Text_and_illustrations	1	1	1	1	1	2	2.41666666666667
@@ -1649,7 +1649,7 @@ content_producer	term_id	langs	country	type	result_number	link_type	link_accessi
 1	45	Korean	South Korea	Novel Science and Technology Issues	2	1	1	4	2	1	0.5	1	Text_and_illustrations	2	0	1	2	0	2	2.33333333333333
 1	45	Korean	South Korea	Novel Science and Technology Issues	3	1	4	4	0	1	0.5	1	Text_and_illustrations	2	1	0	2	0	3	2
 1	47	Korean	South Korea	Novel Science and Technology Issues	2	1	1	4	2	1	0.5	2	Text_and_illustrations	3	1	1	3	0	4	2.91666666666667
-1	47	Korean	South Korea	Novel Science and Technology Issues	3	1	1	4	3	1	0.5	1	Text_and_illustrations	3	2	1	2	0	NA	2.83333333333333
+1	47	Korean	South Korea	Novel Science and Technology Issues	3	1	1	4	3	1	0.5	1	Text_and_illustrations	3	2	1	2	0	5	2.83333333333333
 1	49	Korean	South Korea	Novel Science and Technology Issues	2	1	1	4	2	1	0.5	1	Text_and_illustrations	2	1	1	3	0	3	2.75
 1	52	Korean	South Korea	Novel Science and Technology Issues	3	1	1	4	2	1	0.5	1	Text_and_illustrations	2	1	1	2	0	3	2.5
 1	59	Korean	South Korea	Socio-Scientific Issues	1	1	1	4	2	1	0.5	1	Text_and_illustrations	3	1	1	3	0	4	2.91666666666667
@@ -1843,19 +1843,19 @@ content_producer	term_id	langs	country	type	result_number	link_type	link_accessi
 1	43	Zulu	South Africa	Novel Science and Technology Issues	3	1	1	3	2	2	1	2	Text	0	0	1	0	2	0	1.16666666666667
 1	68	Zulu	South Africa	Socio-Scientific Issues	2	1	1	4	2	1	0.5	2	Text	1	0	1	0	1	1	2
 1	43	Zulu	South Africa	Novel Science and Technology Issues	2	1	4	4	0	0	0	0	Text	1	1	0	1	0	2	1.58333333333333
-1	71	Portuguese	Brazil	Socio-Scientific Issues	13	1	1	4	3	2	1	2	Database	3	2	1	1	2	NA	3.25
+1	71	Portuguese	Brazil	Socio-Scientific Issues	13	1	1	4	3	2	1	2	Database	3	2	1	1	2	5	3.25
 1	71	French	Democratic Republic of the Congo	Socio-Scientific Issues	8	1	4	1	0	0	0	0	Database	3	1	0	0	0	4	0.666666666666667
 1	28	Arabic	Egypt	Canonical Scientific Issues	2	1	1	4	3	1	0.5	0	Database	2	1	1	0	1	3	2.33333333333333
 1	28	Arabic	Egypt	Canonical Scientific Issues	15	1	1	4	3	0	0	1	Database	2	2	1	0	0	4	2.16666666666667
 1	43	Arabic	Egypt	Novel Science and Technology Issues	3	1	1	4	3	0	0	0	Database	2	1	1	1	1	3	2.58333333333333
-1	44	Arabic	Egypt	Novel Science and Technology Issues	14	1	1	4	3	0	0	1	Database	3	2	1	0	0	NA	2.33333333333333
+1	44	Arabic	Egypt	Novel Science and Technology Issues	14	1	1	4	3	0	0	1	Database	3	2	1	0	0	5	2.33333333333333
 1	45	Arabic	Egypt	Novel Science and Technology Issues	11	1	1	4	3	0	0	1	Database	2	2	1	0	0	4	2.16666666666667
 1	46	Arabic	Egypt	Novel Science and Technology Issues	6	1	1	4	3	0	0	1	Database	2	2	1	1	0	4	2.41666666666667
 1	49	Arabic	Egypt	Novel Science and Technology Issues	6	1	1	4	3	0	0	1	Database	2	2	1	0	0	4	2.16666666666667
 1	58	Arabic	Egypt	Socio-Scientific Issues	11	1	1	4	3	0	0	1	Database	2	2	1	1	1	4	2.75
 1	66	Arabic	Egypt	Socio-Scientific Issues	5	1	1	4	3	0	0	1	Database	2	2	1	1	0	4	2.41666666666667
-1	70	Arabic	Egypt	Socio-Scientific Issues	7	1	1	4	3	0	0	1	Database	3	2	1	0	0	NA	2.33333333333333
-1	45	Spanish	Spain	Novel Science and Technology Issues	8	1	1	4	3	1	0.5	1	Database	3	2	1	0	0	NA	2.33333333333333
+1	70	Arabic	Egypt	Socio-Scientific Issues	7	1	1	4	3	0	0	1	Database	3	2	1	0	0	5	2.33333333333333
+1	45	Spanish	Spain	Novel Science and Technology Issues	8	1	1	4	3	1	0.5	1	Database	3	2	1	0	0	5	2.33333333333333
 1	5	French	France	Canonical Scientific Issues	6	1	4	1	0	0	0	0	Database	3	1	0	0	0	4	0.666666666666667
 1	5	French	France	Canonical Scientific Issues	7	1	4	1	0	0	0	0	Database	3	1	0	0	0	4	0.666666666666667
 1	5	French	France	Canonical Scientific Issues	12	1	4	1	0	0	0	0	Database	3	1	0	0	0	4	0.666666666666667
@@ -1864,18 +1864,18 @@ content_producer	term_id	langs	country	type	result_number	link_type	link_accessi
 1	44	Indonesian	Indonesia	Novel Science and Technology Issues	6	1	1	4	3	1	0.5	2	Database	2	2	1	0	0	4	2.16666666666667
 1	44	Indonesian	Indonesia	Novel Science and Technology Issues	8	1	1	4	3	1	0.5	2	Database	2	2	1	0	0	4	2.16666666666667
 1	44	Indonesian	Indonesia	Novel Science and Technology Issues	13	1	1	4	3	1	0.5	2	Database	2	2	1	0	0	4	2.16666666666667
-1	45	Indonesian	Indonesia	Novel Science and Technology Issues	8	1	1	4	3	1	0.5	2	Database	3	2	1	1	1	NA	2.91666666666667
+1	45	Indonesian	Indonesia	Novel Science and Technology Issues	8	1	1	4	3	1	0.5	2	Database	3	2	1	1	1	5	2.91666666666667
 1	45	Indonesian	Indonesia	Novel Science and Technology Issues	15	1	1	4	3	2	1	2	Database	2	2	1	0	2	4	2.83333333333333
 1	70	Indonesian	Indonesia	Socio-Scientific Issues	5	1	1	4	3	2	1	2	Database	2	2	1	0	2	4	2.83333333333333
-1	70	Indonesian	Indonesia	Socio-Scientific Issues	10	1	1	4	3	2	1	2	Database	3	2	1	0	2	NA	3
-1	5	Hebrew	Israel	Canonical Scientific Issues	5	1	1	4	3	2	1	2	Database	3	2	1	1	2	NA	3.25
+1	70	Indonesian	Indonesia	Socio-Scientific Issues	10	1	1	4	3	2	1	2	Database	3	2	1	0	2	5	3
+1	5	Hebrew	Israel	Canonical Scientific Issues	5	1	1	4	3	2	1	2	Database	3	2	1	1	2	5	3.25
 1	8	Hebrew	Israel	Canonical Scientific Issues	2	1	1	4	3	2	1	1	Database	1	2	1	1	2	3	2.91666666666667
 1	12	Hebrew	Israel	Canonical Scientific Issues	3	1	1	4	2	2	1	2	Database	2	1	2	1	2	3	3.41666666666667
 1	43	Hebrew	Israel	Novel Science and Technology Issues	8	1	1	4	2	1	0.5	2	Database	2	1	1	2	1	3	2.83333333333333
 1	58	Hebrew	Israel	Socio-Scientific Issues	5	1	1	4	1	2	1	1	Database	1	0	2	1	2	1	3.08333333333333
 1	20	Hebrew	Israel	Canonical Scientific Issues	12	1	1	4	2	1	0.5	1	Database	2	0	1	2	0	2	2.33333333333333
 1	28	Hebrew	Israel	Canonical Scientific Issues	15	1	1	4	3	2	1	1	Database	2	2	2	0	2	4	3.33333333333333
-1	59	Hebrew	Israel	Socio-Scientific Issues	2	1	1	4	3	2	1	1	Database	3	2	2	2	2	NA	4
+1	59	Hebrew	Israel	Socio-Scientific Issues	2	1	1	4	3	2	1	1	Database	3	2	2	2	2	5	4
 1	70	Hebrew	Israel	Socio-Scientific Issues	7	1	1	4	2	1	0.5	2	Database	3	1	2	0	1	4	3
 1	71	Hebrew	Israel	Socio-Scientific Issues	6	1	1	4	1	1	0.5	1	Database	2	1	2	0	1	3	2.83333333333333
 1	44	Hindi	India	Novel Science and Technology Issues	12	1	4	1	0	0	0	0	Database	3	1	0	0	0	4	0.666666666666667
@@ -1886,14 +1886,14 @@ content_producer	term_id	langs	country	type	result_number	link_type	link_accessi
 1	70	Hindi	India	Socio-Scientific Issues	11	1	4	1	0	2	1	2	Database	1	1	0	0	2	2	1
 1	70	Hindi	India	Socio-Scientific Issues	12	1	4	1	0	2	1	2	Database	1	1	0	0	2	2	1
 1	71	Hindi	India	Socio-Scientific Issues	3	1	4	1	0	2	1	2	Database	1	1	0	0	2	2	1
-1	35	Russian	Russia	Canonical Scientific Issues	7	1	1	4	3	1	0.5	1	Database	4	2	1	0	0	NA	2.5
+1	35	Russian	Russia	Canonical Scientific Issues	7	1	1	4	3	1	0.5	1	Database	4	2	1	0	0	6	2.5
 1	44	Russian	Russia	Novel Science and Technology Issues	7	1	1	4	3	2	1	2	Database	2	2	1	0	1	4	2.5
 1	47	Russian	Russia	Novel Science and Technology Issues	2	1	1	4	3	2	1	2	Database	2	2	1	1	2	4	3.08333333333333
 1	45	Taiwanese	Taiwan	Novel Science and Technology Issues	1	1	4	1	0	1	0.5	0	Database	2	1	0	0	1	3	0.833333333333333
-1	59	Swahili	Tanzania	Socio-Scientific Issues	7	1	1	4	3	2	1	2	Database	3	2	1	0	2	NA	3
+1	59	Swahili	Tanzania	Socio-Scientific Issues	7	1	1	4	3	2	1	2	Database	3	2	1	0	2	5	3
 1	8	English	United States	Canonical Scientific Issues	15	1	1	4	3	2	1	2	Database	2	2	1	2	2	4	3.33333333333333
 1	58	English	United States	Socio-Scientific Issues	15	1	4	4	3	2	1	0	Database	2	2	1	1	1	4	2.75
-1	71	Afrikaans	South Africa	Socio-Scientific Issues	2	1	1	4	3	2	1	0	Database	3	2	1	0	2	NA	3
+1	71	Afrikaans	South Africa	Socio-Scientific Issues	2	1	1	4	3	2	1	0	Database	3	2	1	0	2	5	3
 1	8	Afrikaans	South Africa	Canonical Scientific Issues	4	1	1	4	0	2	1	0	Database	3	1	0	0	2	4	2.33333333333333
 1	28	Afrikaans	South Africa	Canonical Scientific Issues	6	1	1	4	0	0	0	0	Database	2	1	0	0	1	3	1.83333333333333
 1	70	Afrikaans	South Africa	Socio-Scientific Issues	12	1	1	4	0	2	1	0	Database	3	1	0	0	2	4	2.33333333333333
@@ -2000,7 +2000,7 @@ content_producer	term_id	langs	country	type	result_number	link_type	link_accessi
 1	44	Portuguese	Brazil	Novel Science and Technology Issues	4	3	1	4	3	2	1	1	Text_and_illustrations	1	2	1	0	3	3	3
 1	47	Portuguese	Brazil	Novel Science and Technology Issues	2	1	1	4	3	2	1	0	Text_and_illustrations	2	2	1	0	2	4	2.83333333333333
 1	54	Portuguese	Brazil	Socio-Scientific Issues	4	3	1	4	3	1	0.5	1	Text_and_illustrations	2	2	1	2	2	4	3.33333333333333
-1	54	Portuguese	Brazil	Socio-Scientific Issues	6	3	1	4	3	1	0.5	1	Text_and_illustrations	3	2	1	1	2	NA	3.25
+1	54	Portuguese	Brazil	Socio-Scientific Issues	6	3	1	4	3	1	0.5	1	Text_and_illustrations	3	2	1	1	2	5	3.25
 1	58	Portuguese	Brazil	Socio-Scientific Issues	13	3	1	4	3	1	0.5	1	Text_and_illustrations	1	2	1	0	2	3	2.66666666666667
 1	70	Portuguese	Brazil	Socio-Scientific Issues	5	3	1	4	3	2	1	0	Text_and_illustrations	2	2	1	0	3	4	3.16666666666667
 1	70	Portuguese	Brazil	Socio-Scientific Issues	2	3	1	4	3	2	1	2	Text_and_illustrations	2	2	1	0	3	4	3.16666666666667
@@ -2043,7 +2043,7 @@ content_producer	term_id	langs	country	type	result_number	link_type	link_accessi
 1	47	Arabic	Egypt	Novel Science and Technology Issues	7	1	1	1	3	0	0	2	Text_and_illustrations	1	2	1	0	0	3	1
 1	47	Arabic	Egypt	Novel Science and Technology Issues	12	1	1	1	3	0	0	1	Text_and_illustrations	1	2	1	0	0	3	1
 1	49	Arabic	Egypt	Novel Science and Technology Issues	7	1	1	4	3	0	0	1	Text_and_illustrations	2	2	1	1	0	4	2.41666666666667
-1	6	Spanish	Spain	Canonical Scientific Issues	10	1	1	1	3	1	0.5	2	Text_and_illustrations	3	2	1	1	0	NA	1.58333333333333
+1	6	Spanish	Spain	Canonical Scientific Issues	10	1	1	1	3	1	0.5	2	Text_and_illustrations	3	2	1	1	0	5	1.58333333333333
 1	20	Spanish	Spain	Canonical Scientific Issues	7	1	1	4	3	1	0.5	1	Text_and_illustrations	2	2	1	0	0	4	2.16666666666667
 1	28	Spanish	Spain	Canonical Scientific Issues	6	3	4	4	0	0	0	0	Text_and_illustrations	2	1	0	1	1	3	2.08333333333333
 1	39	Spanish	Spain	Novel Science and Technology Issues	3	1	1	4	3	1	0.5	1	Text_and_illustrations	2	2	1	0	1	4	2.5
@@ -2055,15 +2055,15 @@ content_producer	term_id	langs	country	type	result_number	link_type	link_accessi
 1	47	Spanish	Spain	Novel Science and Technology Issues	10	1	1	4	3	2	1	2	Text_and_illustrations	2	2	1	2	2	4	3.33333333333333
 1	47	Spanish	Spain	Novel Science and Technology Issues	2	1	1	1	3	2	1	2	Text_and_illustrations	2	2	1	0	2	4	1.83333333333333
 1	49	Spanish	Spain	Novel Science and Technology Issues	2	3	1	4	3	1	0.5	1	Text_and_illustrations	2	2	1	0	1	4	2.5
-1	49	Spanish	Spain	Novel Science and Technology Issues	8	1	1	4	3	1	0.5	1	Text_and_illustrations	3	2	1	0	0	NA	2.33333333333333
+1	49	Spanish	Spain	Novel Science and Technology Issues	8	1	1	4	3	1	0.5	1	Text_and_illustrations	3	2	1	0	0	5	2.33333333333333
 1	49	Spanish	Spain	Novel Science and Technology Issues	13	1	1	4	3	1	0.5	1	Text_and_illustrations	2	2	1	1	0	4	2.41666666666667
 1	49	Spanish	Spain	Novel Science and Technology Issues	5	3	1	4	3	1	0.5	2	Text_and_illustrations	2	2	1	0	1	4	2.5
-1	58	Spanish	Spain	Socio-Scientific Issues	3	1	1	4	3	2	1	2	Text_and_illustrations	3	2	1	2	2	NA	3.5
+1	58	Spanish	Spain	Socio-Scientific Issues	3	1	1	4	3	2	1	2	Text_and_illustrations	3	2	1	2	2	5	3.5
 1	59	Spanish	Spain	Socio-Scientific Issues	2	1	1	4	3	2	1	2	Text_and_illustrations	2	2	1	1	2	4	3.08333333333333
 1	59	Spanish	Spain	Socio-Scientific Issues	6	3	1	4	3	2	1	2	Text_and_illustrations	2	2	1	1	3	4	3.41666666666667
 1	59	Spanish	Spain	Socio-Scientific Issues	9	3	1	4	3	2	1	2	Text_and_illustrations	2	2	1	2	3	4	3.66666666666667
 1	70	Spanish	Spain	Socio-Scientific Issues	7	1	1	4	3	2	1	2	Text_and_illustrations	2	2	1	1	2	4	3.08333333333333
-1	70	Spanish	Spain	Socio-Scientific Issues	8	1	1	4	3	2	1	2	Text_and_illustrations	3	2	1	2	2	NA	3.5
+1	70	Spanish	Spain	Socio-Scientific Issues	8	1	1	4	3	2	1	2	Text_and_illustrations	3	2	1	2	2	5	3.5
 1	47	Spanish	Spain	Novel Science and Technology Issues	3	1	4	4	0	0	0	0	Text_and_illustrations	1	1	0	1	0	2	1.58333333333333
 1	68	Spanish	Spain	Socio-Scientific Issues	3	3	4	4	0	0	0	0	Text_and_illustrations	0	1	0	0	1	1	1.5
 1	70	Spanish	Spain	Socio-Scientific Issues	5	3	4	4	0	0	0	0	Text_and_illustrations	1	1	0	0	2	2	2
@@ -2266,23 +2266,23 @@ content_producer	term_id	langs	country	type	result_number	link_type	link_accessi
 1	68	Korean	South Korea	Socio-Scientific Issues	6	3	1	4	3	1	0.5	1	Text_and_illustrations	1	2	1	1	1	3	2.58333333333333
 1	70	Korean	South Korea	Socio-Scientific Issues	7	2	1	4	3	2	1	1	Text_and_illustrations	1	2	1	0	1	3	2.33333333333333
 1	71	Korean	South Korea	Socio-Scientific Issues	1	1	1	4	2	1	0.5	2	Text_and_illustrations	0	1	1	0	1	1	2
-1	5	Spanish	Mexico	Canonical Scientific Issues	4	1	1	4	3	1	0.5	2	Text_and_illustrations	3	2	1	1	1	NA	2.91666666666667
+1	5	Spanish	Mexico	Canonical Scientific Issues	4	1	1	4	3	1	0.5	2	Text_and_illustrations	3	2	1	1	1	5	2.91666666666667
 1	47	Spanish	Mexico	Novel Science and Technology Issues	2	1	1	1	3	1	0.5	1	Text_and_illustrations	1	2	1	0	0	3	1
 1	49	Spanish	Mexico	Novel Science and Technology Issues	13	1	1	4	3	2	1	2	Text_and_illustrations	2	2	1	2	1	4	3
 1	68	Spanish	Mexico	Socio-Scientific Issues	11	3	1	4	3	2	1	2	Text_and_illustrations	2	2	1	0	3	4	3.16666666666667
 1	71	Spanish	Mexico	Socio-Scientific Issues	9	1	1	4	3	1	0.5	2	Text_and_illustrations	2	2	1	2	1	4	3
-1	71	Spanish	Mexico	Socio-Scientific Issues	13	1	1	4	3	2	1	2	Text_and_illustrations	3	2	1	2	2	NA	3.5
+1	71	Spanish	Mexico	Socio-Scientific Issues	13	1	1	4	3	2	1	2	Text_and_illustrations	3	2	1	2	2	5	3.5
 1	65	Spanish	Mexico	Socio-Scientific Issues	10	1	1	3	1	1	0.5	2	Text_and_illustrations	2	1	1	1	1	3	1.58333333333333
 1	35	Spanish	Mexico	Canonical Scientific Issues	3	1	1	4	3	1	0.5	1	Text_and_illustrations	2	2	1	1	0	4	2.41666666666667
 1	71	Spanish	Mexico	Socio-Scientific Issues	5	3	1	4	0	2	1	2	Text_and_illustrations	1	1	1	2	3	2	3.33333333333333
 1	8	Portuguese	Portugal	Canonical Scientific Issues	4	3	1	4	3	1	0.5	2	Text_and_illustrations	1	2	1	0	2	3	2.66666666666667
 1	8	Portuguese	Portugal	Canonical Scientific Issues	5	3	1	4	1	1	0.5	2	Text_and_illustrations	2	1	1	1	2	3	2.91666666666667
 1	44	Portuguese	Portugal	Novel Science and Technology Issues	2	3	1	4	3	1	0.5	0	Text_and_illustrations	2	2	1	0	2	4	2.83333333333333
-1	45	Portuguese	Portugal	Novel Science and Technology Issues	8	1	1	4	3	1	0.5	2	Text_and_illustrations	3	2	1	1	1	NA	2.91666666666667
+1	45	Portuguese	Portugal	Novel Science and Technology Issues	8	1	1	4	3	1	0.5	2	Text_and_illustrations	3	2	1	1	1	5	2.91666666666667
 1	45	Portuguese	Portugal	Novel Science and Technology Issues	10	1	1	4	3	1	0.5	2	Text_and_illustrations	2	2	1	1	1	4	2.75
 1	54	Portuguese	Portugal	Socio-Scientific Issues	4	3	1	4	3	2	1	2	Text_and_illustrations	1	2	1	1	3	3	3.25
 1	54	Portuguese	Portugal	Socio-Scientific Issues	5	3	1	4	3	2	1	2	Text_and_illustrations	1	2	1	1	3	3	3.25
-1	59	Portuguese	Portugal	Socio-Scientific Issues	7	3	1	4	3	1	0.5	2	Text_and_illustrations	3	2	1	1	2	NA	3.25
+1	59	Portuguese	Portugal	Socio-Scientific Issues	7	3	1	4	3	1	0.5	2	Text_and_illustrations	3	2	1	1	2	5	3.25
 1	59	Portuguese	Portugal	Socio-Scientific Issues	10	1	1	4	3	2	1	2	Text_and_illustrations	2	2	1	1	2	4	3.08333333333333
 1	59	Portuguese	Portugal	Socio-Scientific Issues	11	1	1	4	3	2	1	2	Text_and_illustrations	2	2	1	1	2	4	3.08333333333333
 1	70	Portuguese	Portugal	Socio-Scientific Issues	1	3	1	4	3	1	0.5	2	Text_and_illustrations	1	2	2	0	2	3	3.16666666666667
@@ -2435,7 +2435,7 @@ content_producer	term_id	langs	country	type	result_number	link_type	link_accessi
 1	48	Chinese	United States	Novel Science and Technology Issues	5	1	1	4	1	1	0.5	1	Text_and_illustrations	3	0	1	2	1	3	2.83333333333333
 1	49	Chinese	United States	Novel Science and Technology Issues	12	1	1	4	2	1	0.5	1	Text_and_illustrations	2	1	1	1	0	3	2.25
 1	59	Chinese	United States	Socio-Scientific Issues	6	1	1	4	2	2	1	2	Text_and_illustrations	3	1	1	2	2	4	3.33333333333333
-1	70	Chinese	United States	Socio-Scientific Issues	10	1	1	4	3	2	1	2	Text_and_illustrations	3	2	1	0	2	NA	3
+1	70	Chinese	United States	Socio-Scientific Issues	10	1	1	4	3	2	1	2	Text_and_illustrations	3	2	1	0	2	5	3
 1	13	Vietnamese	Vietnam	Canonical Scientific Issues	5	1	1	4	3	1	0.5	1	Text_and_illustrations	1	2	1	0	0	3	2
 1	13	Vietnamese	Vietnam	Canonical Scientific Issues	10	1	1	4	3	1	0.5	2	Text_and_illustrations	1	2	1	0	0	3	2
 1	35	Vietnamese	Vietnam	Canonical Scientific Issues	6	1	1	4	3	0	0	1	Text_and_illustrations	1	2	1	0	0	3	2
@@ -2557,8 +2557,8 @@ content_producer	term_id	langs	country	type	result_number	link_type	link_accessi
 1	44	French	France	Novel Science and Technology Issues	9	1	4	1	0	0	0	0	Database	2	1	0	0	0	3	0.5
 1	28	French	France	Canonical Scientific Issues	3	1	4	1	3	0	0	0	Database	2	2	0	0	0	4	0.666666666666667
 1	29	French	France	Canonical Scientific Issues	10	1	4	1	0	0	0	0	Database	3	1	0	0	0	4	0.666666666666667
-1	38	French	France	Canonical Scientific Issues	2	1	4	1	3	0	0	0	Database	3	2	0	0	0	NA	0.833333333333333
-1	47	Hebrew	Israel	Novel Science and Technology Issues	12	1	1	4	3	1	0.5	1	Database	3	2	2	0	1	NA	3.16666666666667
+1	38	French	France	Canonical Scientific Issues	2	1	4	1	3	0	0	0	Database	3	2	0	0	0	5	0.833333333333333
+1	47	Hebrew	Israel	Novel Science and Technology Issues	12	1	1	4	3	1	0.5	1	Database	3	2	2	0	1	5	3.16666666666667
 1	6	Korean	South Korea	Canonical Scientific Issues	11	1	1	4	3	1	0.5	1	Database	2	2	0	0	0	4	1.66666666666667
 1	28	Russian	Russia	Canonical Scientific Issues	8	1	4	4	0	0	0	0	Database	3	1	0	0	0	4	1.66666666666667
 1	39	Russian	Russia	Novel Science and Technology Issues	2	1	1	1	1	2	1	2	Database	2	0	1	0	2	2	1.5
@@ -2566,7 +2566,7 @@ content_producer	term_id	langs	country	type	result_number	link_type	link_accessi
 1	43	Russian	Russia	Novel Science and Technology Issues	5	1	1	1	2	1	0.5	1	Database	2	1	1	0	1	3	1.33333333333333
 1	56	Turkish	Turkey	Socio-Scientific Issues	1	1	1	1	2	2	1	0	Database	3	1	1	0	2	4	1.83333333333333
 1	47	Taiwanese	Taiwan	Novel Science and Technology Issues	12	1	1	1	1	1	0.5	1	Database	1	1	1	0	0	2	0.833333333333333
-1	28	English	United States	Canonical Scientific Issues	14	1	1	1	3	2	1	1	Database	3	2	2	0	2	NA	2.5
+1	28	English	United States	Canonical Scientific Issues	14	1	1	1	3	2	1	1	Database	3	2	2	0	2	5	2.5
 1	38	English	United States	Canonical Scientific Issues	12	3	4	1	0	0	0	0	Database	1	1	0	0	1	2	0.666666666666667
 1	47	English	United States	Novel Science and Technology Issues	2	1	1	1	3	1	0.5	0	Database	1	2	1	0	1	3	1.33333333333333
 1	5	Afrikaans	South Africa	Canonical Scientific Issues	8	1	1	1	1	2	1	1	Database	2	0	1	0	2	2	1.5
@@ -2616,7 +2616,7 @@ content_producer	term_id	langs	country	type	result_number	link_type	link_accessi
 1	47	German	Germany	Novel Science and Technology Issues	16	1	1	4	3	1	0.5	1	Text_and_illustrations	2	2	1	1	1	4	2.75
 1	47	German	Germany	Novel Science and Technology Issues	1	1	1	1	3	1	0.5	1	Text_and_illustrations	2	2	1	0	1	4	1.5
 1	38	German	Germany	Canonical Scientific Issues	4	1	1	1	3	1	0.5	1	Text_and_illustrations	2	2	1	1	1	4	1.75
-1	5	Spanish	Spain	Canonical Scientific Issues	2	1	1	1	3	2	1	2	Text_and_illustrations	3	2	1	1	2	NA	2.25
+1	5	Spanish	Spain	Canonical Scientific Issues	2	1	1	1	3	2	1	2	Text_and_illustrations	3	2	1	1	2	5	2.25
 1	6	Spanish	Spain	Canonical Scientific Issues	4	1	1	4	3	1	0.5	1	Text_and_illustrations	2	2	1	1	0	4	2.41666666666667
 1	39	Spanish	Spain	Novel Science and Technology Issues	10	1	1	1	3	1	0.5	2	Text_and_illustrations	2	2	1	0	0	4	1.16666666666667
 1	46	Spanish	Spain	Novel Science and Technology Issues	1	1	1	1	3	2	1	2	Text_and_illustrations	0	1	1	0	1	1	1
@@ -2624,7 +2624,7 @@ content_producer	term_id	langs	country	type	result_number	link_type	link_accessi
 1	54	Spanish	Spain	Socio-Scientific Issues	2	1	1	1	3	1	0.5	2	Text_and_illustrations	2	2	1	1	1	4	1.75
 1	58	Spanish	Spain	Socio-Scientific Issues	1	1	1	4	3	1	0.5	1	Text_and_illustrations	2	2	1	2	0	4	2.66666666666667
 1	58	Spanish	Spain	Socio-Scientific Issues	4	1	1	1	3	2	1	2	Text_and_illustrations	2	2	1	1	1	4	1.75
-1	59	Spanish	Spain	Socio-Scientific Issues	4	1	1	1	3	2	1	2	Text_and_illustrations	3	2	1	1	2	NA	2.25
+1	59	Spanish	Spain	Socio-Scientific Issues	4	1	1	1	3	2	1	2	Text_and_illustrations	3	2	1	1	2	5	2.25
 1	65	Spanish	Spain	Socio-Scientific Issues	10	1	1	4	3	1	0.5	2	Text_and_illustrations	2	2	1	1	1	4	2.75
 1	65	Spanish	Spain	Socio-Scientific Issues	2	1	1	4	1	2	1	2	Text_and_illustrations	3	1	1	1	2	4	3.08333333333333
 1	58	French	France	Socio-Scientific Issues	1	1	1	1	3	2	1	2	Text_and_illustrations	2	2	1	0	1	4	1.5
@@ -3061,7 +3061,7 @@ content_producer	term_id	langs	country	type	result_number	link_type	link_accessi
 1	65	English	United States	Socio-Scientific Issues	11	3	1	4	3	2	1	1	Video	1	2	2	0	3	3	3.5
 1	65	English	United States	Socio-Scientific Issues	9	1	1	3	3	1	0.5	1	Video	1	2	1	0	0	3	1
 1	66	English	United States	Socio-Scientific Issues	11	2	1	3	2	1	0.5	1	Video	2	1	2	1	1	3	2.08333333333333
-1	66	English	United States	Socio-Scientific Issues	9	1	1	4	3	2	1	2	Video	3	2	1	1	2	NA	3.25
+1	66	English	United States	Socio-Scientific Issues	9	1	1	4	3	2	1	2	Video	3	2	1	1	2	5	3.25
 1	71	English	United States	Socio-Scientific Issues	12	2	1	3	3	2	1	1	Video	1	2	2	2	2	3	2.66666666666667
 1	35	Chinese	United States	Canonical Scientific Issues	10	2	1	4	3	1	0.5	1	Video	1	2	1	1	0	3	2.25
 1	35	Chinese	United States	Canonical Scientific Issues	12	2	1	4	3	1	0.5	1	Video	1	2	1	1	0	3	2.25
@@ -3089,9 +3089,9 @@ content_producer	term_id	langs	country	type	result_number	link_type	link_accessi
 1	8	Zulu	South Africa	Canonical Scientific Issues	13	2	4	4	0	2	1	0	Video	1	1	0	1	1	2	1.91666666666667
 1	29	Zulu	South Africa	Canonical Scientific Issues	11	2	4	4	0	0	0	0	Video	1	1	0	0	0	2	1.33333333333333
 1	29	Zulu	South Africa	Canonical Scientific Issues	9	2	4	4	0	0	0	0	Video	1	1	0	0	0	2	1.33333333333333
-1	35	Turkish	Turkey	Canonical Scientific Issues	5	2	1	4	3	1	0.5	1	Simulation	3	2	1	0	0	NA	2.33333333333333
-1	35	Turkish	Turkey	Canonical Scientific Issues	8	2	1	4	3	1	0.5	1	Simulation	3	2	1	1	0	NA	2.58333333333333
-1	38	Turkish	Turkey	Canonical Scientific Issues	4	2	1	4	3	2	1	2	Simulation	3	2	1	0	2	NA	3
+1	35	Turkish	Turkey	Canonical Scientific Issues	5	2	1	4	3	1	0.5	1	Simulation	3	2	1	0	0	5	2.33333333333333
+1	35	Turkish	Turkey	Canonical Scientific Issues	8	2	1	4	3	1	0.5	1	Simulation	3	2	1	1	0	5	2.58333333333333
+1	38	Turkish	Turkey	Canonical Scientific Issues	4	2	1	4	3	2	1	2	Simulation	3	2	1	0	2	5	3
 1	39	German	Germany	Novel Science and Technology Issues	5	2	1	4	2	1	0.5	1	Text_and_illustrations	2	1	1	0	1	3	2.33333333333333
 1	39	German	Germany	Novel Science and Technology Issues	7	2	1	4	2	1	0.5	1	Text_and_illustrations	2	1	1	1	0	3	2.25
 1	45	German	Germany	Novel Science and Technology Issues	3	2	1	3	2	1	0.5	1	Text_and_illustrations	3	0	1	0	0	3	1
