@@ -126,3 +126,30 @@ model2 <- lm(formula = agg_sci_qual_norm ~ langs + type + result_number +
     site_type_fct, data = trainData)
 summary(model2)
 ```
+
+```{r}
+predictions <- predict(model2, newdata = testData)
+# calculate RMSE
+rmse <- function(actual, predicted) {
+  sqrt(mean((actual - predicted)^2))
+}
+
+# Calculate RMSE for full model
+rmse <- rmse(testData$agg_sci_qual_norm, predictions)
+cat("RMSE: ", rmse, "\n")
+
+#calculate the MAE
+mae <- function(actual, predicted) {
+  mean(abs(actual - predicted))
+}
+mae <- mae(testData$agg_sci_qual_norm, predictions)
+cat("MAE: ", mae, "\n")
+
+#calculate the r squared
+r_squared <- function(actual, predicted) {
+  1 - sum((actual - predicted)^2) / sum((actual - mean(actual))^2)
+}
+r <- r_squared(testData$agg_sci_qual_norm, predictions)
+
+cat("r^2: ", r)
+```
