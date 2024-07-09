@@ -1,0 +1,128 @@
+---
+title: "Final Project"
+author: "Neomi Rabaev, Yael Snear, Yarin Swisa, Liat Vaizman"
+date: "2024-07-09"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+```
+
+## load the data
+```{r}
+data <- read_tsv('cleaned_data.tsv')
+glimpse(data)
+```
+### Let's start with visualizing the data
+
+```{r}
+ggplot(data, aes(x = langs, y = agg_sci_qual_norm, color = langs)) +
+  geom_jitter(width = 0.2, height = 0, size = 2, alpha = 0.6) +
+  theme_minimal() +
+  labs(
+    title = "Normalized Science Scores by Language",
+    x = "Language",
+    y = "Normalized Science Score"
+  ) +  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  )
+```
+
+
+```{r}
+
+# Summarize data to get mean and standard deviation
+summary_data <- data %>%
+  group_by(langs) %>%
+  summarise(
+    mean_score = mean(agg_sci_qual_norm),
+    sd_score = sd(agg_sci_qual_norm)
+  )
+
+# Plotting the data
+ggplot(summary_data, aes(x = langs, y = mean_score, fill = langs)) +
+  geom_bar(stat = "identity", position = position_dodge(), width = 0.7) +
+  geom_errorbar(aes(ymin = mean_score - sd_score, ymax = mean_score + sd_score), width = 0.2, position = position_dodge(0.7)) +
+  theme_minimal() +
+  labs(
+    title = "Mean Normalized Science Scores by Language",
+    x = "Language",
+    y = "Mean Normalized Science Score"
+  )  +  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  )
+```
+
+```{r}
+ggplot(data, aes(x = langs, y = agg_sci_qual_norm, fill = langs)) +
+  geom_boxplot() +
+  theme_minimal() +
+  labs(
+    title = "Distribution of Scientific Content Quality by Language",
+    x = "Language",
+    y = "Quality Score"
+  ) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) 
+```
+
+### Divide to train and test
+```{r}
+library(caret)
+
+# Set the seed for reproducibility
+set.seed(123)
+
+# Split the data into 70% training and 30% test
+trainIndex <- createDataPartition(data$agg_sci_qual_norm, p = 0.7, 
+                                  list = FALSE, 
+                                  times = 1)
+
+# Create the training and test data-sets
+trainData <- data[trainIndex, ]
+testData <- data[-trainIndex, ]
+```
+
+
+```{r}
+# Convert langs and country to factors
+trainData <- trainData %>%
+  mutate(
+    langs = factor(langs),
+    country = factor(country)
+  )
+
+# Run the linear regression model again
+model <- lm(agg_sci_qual_norm ~ ., data = trainData)
+summary(model)
+```
+### remove some features from the model
+```{r}
+model <- lm(agg_sci_qual_norm ~ . - jargon_score - site_type_fct - country - langs, data = trainData)
+summary(model)
+```
+
+
+```{r}
+model <- lm(agg_sci_qual_norm ~ result_number + link_type + how_recent_is_the_information  + are_there_local_examples_in_the_content_e_g_r + local_examples_prop + does_the_content_present_advantages_and_disad + link_accessibility + jargon_score, data = trainData)
+summary(model)
+```
+
+```{r}
+model1 <- lm(agg_sci_qual_norm ~ . - access_multimedia - access_sci - access - cred - contextual - accuracy,data = trainData)
+step_model <- step(model1)
+summary(step_model)
+```
+
+```{r}
+#experimenting more
+model2 <- lm(formula = agg_sci_qual_norm ~ langs + type + result_number + 
+    link_type + link_accessibility + how_recent_is_the_information + 
+    jargon_score + local_examples_prop + does_the_content_present_advantages_and_disad + 
+    site_type_fct, data = trainData)
+summary(model2)
+```
