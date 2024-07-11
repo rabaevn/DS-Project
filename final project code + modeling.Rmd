@@ -151,5 +151,44 @@ r_squared <- function(actual, predicted) {
 }
 r <- r_squared(testData$agg_sci_qual_norm, predictions)
 
+# Function to calculate adjusted R-squared
+adjusted_r_squared <- function(actual, predicted, num_predictors) {
+  n <- length(actual)
+  r_squared <- 1 - sum((actual - predicted)^2) / sum((actual - mean(actual))^2)
+  adj_r_squared <- 1 - (1 - r_squared) * ((n - 1) / (n - num_predictors - 1))
+  return(adj_r_squared)
+}
+
 cat("r^2: ", r)
+# num_predictors is the number of predictors used in your model
+num_predictors <- length(predictions)  # or set to the number of predictors used in your model
+adj_r <- adjusted_r_squared(testData$agg_sci_qual_norm, predictions, 10)
+
+# Print adjusted R-squared
+cat("adjusted r^2: ", adj_r)
+
+
+
+```
+
+### now, we are trying to remove the rows where link_accessibility=4 (irrelevent)
+we want to know if it has an effect on our results
+
+
+```{r}
+data_no_4 <- data %>%
+  filter(link_accessibility != 4)
+glimpse(data_no_4)
+```
+
+```{r}
+ggplot(data_no_4, aes(x = langs, y = agg_sci_qual_norm, fill = langs)) +
+  geom_boxplot() +
+  theme_minimal() +
+  labs(
+    title = "Distribution of Scientific Content Quality by Language (Withhout Irrelevant Search Results)",
+    x = "Language",
+    y = "Quality Score"
+  ) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) 
 ```
