@@ -69,7 +69,44 @@ ggplot(data, aes(x = langs, y = agg_sci_qual_norm, fill = langs)) +
   ) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) 
 ```
+We can see some surprising result for some languages - German, French and Japanese are lower than we thought, while Turkish and Swahili are higer. Let's look at their scores for each field:
+```{r}
+# Load necessary packages
+library(tidyverse)
+library(viridis)
 
+# Filter the data for the specified languages
+filtered_data <- data %>%
+  filter(langs %in% c("French", "German", "Japanese", "Swahili", "Turkish"))
+
+# Reshape the data to long format
+data_long <- filtered_data %>%
+  pivot_longer(cols = c(access, contextual, accuracy, how_recent_is_the_information, access_sci),
+               names_to = "score_type",
+               values_to = "score_value")
+
+# Create the facet graph
+ggplot(data_long, aes(x = score_type, y = score_value, fill = score_type)) +
+  geom_boxplot() +
+  facet_wrap(~ langs) +
+  theme_minimal(base_size = 14) +
+  labs(title = "Scores by Language",
+       x = "Score Type",
+       y = "Score Value") +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1, size = 6),
+    axis.title.x = element_text(size = 12, face = "bold"),
+    axis.title.y = element_text(size = 12, face = "bold"),
+    plot.title = element_text(size = 14, face = "bold", hjust = 0.5),
+    strip.text = element_text(size = 12, face = "bold"),
+    legend.position = "bottom",
+    legend.title = element_blank(),
+    panel.spacing = unit(2, "lines") # Increase space between facets
+  ) +
+  scale_fill_brewer(palette = "Set3") +
+  theme(plot.margin = margin(20, 20, 20, 20)) 
+
+```
 ### Divide to train and test
 ```{r}
 library(caret)
@@ -159,9 +196,7 @@ adjusted_r_squared <- function(actual, predicted, num_predictors) {
   return(adj_r_squared)
 }
 
-cat("r^2: ", r)
-# num_predictors is the number of predictors used in your model
-num_predictors <- length(predictions)  # or set to the number of predictors used in your model
+cat("r^2: ", r, "\n")
 adj_r <- adjusted_r_squared(testData$agg_sci_qual_norm, predictions, 10)
 
 # Print adjusted R-squared
@@ -191,4 +226,71 @@ ggplot(data_no_4, aes(x = langs, y = agg_sci_qual_norm, fill = langs)) +
     y = "Quality Score"
   ) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) 
+```
+
+### model
+```{r}
+library(caret)
+
+# Set the seed for reproducibility
+set.seed(321)
+
+# Split the data into 70% training and 30% test
+trainIndex <- createDataPartition(data_no_4$agg_sci_qual_norm, p = 0.7, 
+                                  list = FALSE, 
+                                  times = 1)
+
+# Create the training and test data-sets
+trainData4 <- data[trainIndex, ]
+testData4 <- data[-trainIndex, ]
+```
+
+```{r}
+model_no_4 <- lm(formula = agg_sci_qual_norm ~ langs + type + result_number + 
+    link_type + link_accessibility + how_recent_is_the_information + 
+    jargon_score + local_examples_prop + does_the_content_present_advantages_and_disad + 
+    site_type_fct, data = trainData4)
+summary(model_no_4)
+
+```
+
+```{r}
+predictions4 <- predict(model_no_4, newdata = testData4)
+# calculate RMSE
+rmse <- function(actual, predicted) {
+  sqrt(mean((actual - predicted)^2))
+}
+
+# Calculate RMSE for full model
+rmse <- rmse(testData4$agg_sci_qual_norm, predictions4)
+cat("RMSE: ", rmse, "\n")
+
+#calculate the MAE
+mae <- function(actual, predicted) {
+  mean(abs(actual - predicted))
+}
+mae <- mae(testData4$agg_sci_qual_norm, predictions4)
+cat("MAE: ", mae, "\n")
+
+#calculate the r squared
+r_squared <- function(actual, predicted) {
+  1 - sum((actual - predicted)^2) / sum((actual - mean(actual))^2)
+}
+r <- r_squared(testData4$agg_sci_qual_norm, predictions4)
+
+# Function to calculate adjusted R-squared
+adjusted_r_squared <- function(actual, predicted, num_predictors) {
+  n <- length(actual)
+  r_squared <- 1 - sum((actual - predicted)^2) / sum((actual - mean(actual))^2)
+  adj_r_squared <- 1 - (1 - r_squared) * ((n - 1) / (n - num_predictors - 1))
+  return(adj_r_squared)
+}
+
+cat("r^2: ", r, "\n")
+adj_r <- adjusted_r_squared(testData4$agg_sci_qual_norm, predictions4, 10)
+
+# Print adjusted R-squared
+cat("adjusted r^2: ", adj_r)
+
+
 ```
